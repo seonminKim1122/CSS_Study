@@ -1,0 +1,58 @@
+.container {
+    display: grid;
+
+    /*column 3개로 만들어서 grid-cell 배치 할 건데 각 column 은 100px*/
+    /* grid-template-columns: 100px 100px 100px; */
+    
+    /*grid container 의 1, 2, 3 번째 row 의 크기를 100px로 조정*/
+    /* grid-template-rows: 100px 100px 100px; */
+
+    /* grid-container 의 1, 2, 3, 4번째 row를 100px 로 설정 */
+    /* grid-template-rows: 100px 100px 100px 100px; */
+
+    /* grid-container 의 2번째 row는 200px 로 설정 */
+    /* grid-template-rows: 100px 200px 100px 100px; */
+
+    /* 동일한 크기로 column 을 나누거나
+    row 에 크기를 줄 때 repeat 을 사용하면 보다 간편 */
+    /* grid-template-columns: repeat(5, 100px); */
+    /* grid-template-rows: repeat(2, 100px); */
+
+    /* 반응형 웹페이지를 원한다면 비율로 크기를 지정 */
+    /* grid-template-columns: repeat(5, 20%); */
+    /* grid-template-rows: 100px 200px; */
+
+    /* 전체 크기 중 50% 활용하는 케이스 */
+    /* grid-template-columns: repeat(5, 10%); */
+
+    /* fr 을 사용해 전체 너비를 비율로 나눌 수도 있다 */
+    /* grid-template-columns: repeat(5, 1fr); */
+
+    /* grid 에서 column 값을 정하고 몇 개의 row 가 나올지
+    계산하는 것은 귀찮으므로 auto-rows 사용하면 편함, 단 template-rows 가 우선순위를 가지므로
+    같이 쓸 수는 없다 */
+    /* grid-template-columns: repeat(5, 1fr); */
+    /* grid-auto-rows: 150px; */
+
+    /* 지정한 row 사이즈보다 컨텐츠가 더 크다면
+    당연히 컨텐츠가 잘릴 것이다. 따라서 minmax() 를 이용해
+    지정한 row 사이즈보다 컨텐츠가 더 크면 컨텐츠 사이즈만큼
+    row 사이즈를 키울 수도 있다 */
+    /* grid-template-columns: repeat(5, 1fr); */
+    /* grid-auto-rows: minmax(150px, auto); */
+
+    /* 그리드 셀 사이에 갭을 줄 수도 있다 */
+    /* grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px; */
+
+    /* grid-gap 을 통해 row, col 동시에 gap 을 줄 수도 있다 */
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 10px;
+
+    /* 컨테이너 전체에서 그리드 자체에 대한 gap 을 주고 싶으면
+    padding! */
+    padding: 10px;
+}
